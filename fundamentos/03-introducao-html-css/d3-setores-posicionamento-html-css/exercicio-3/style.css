@@ -2,6 +2,10 @@
     text-align: center;
 }
 
+.lists {
+    list-style: none;
+}
+
 li:hover {
     background-color: rgb(209, 205, 205);
 }
@@ -9,3 +13,5 @@ li:hover {
 li:active {
     font-family: monospace; 
 }
+
+
