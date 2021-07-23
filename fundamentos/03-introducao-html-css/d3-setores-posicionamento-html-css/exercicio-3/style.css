@@ -1,0 +1,11 @@
+.title-and-description {
+    text-align: center;
+}
+
+li:hover {
+    background-color: rgb(209, 205, 205);
+}
+
+li:active {
+    font-family: monospace; 
+}
