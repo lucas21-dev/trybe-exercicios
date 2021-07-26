@@ -10,3 +10,40 @@ ol li:nth-of-type(2n) {
 ol li:nth-of-type(2n+1) {
     text-transform: uppercase;
 }
+
+li {
+    font-size: 20px;
+}
+
+li em {
+    font-weight: 800;
+}
+
+ul.languages li.blue{
+    color: blue;
+}
+
+.header {
+    color: red;
+}
+
+.italic {
+    font-size: 40px;
+    border: 1px solid black;
+}
+
+ul.languages li.blue{
+    color: blue;
+}
+
+.pink {
+    background-color: pink;
+}
+
+a:hover {
+    color: orange;
+    font-weight: 800;
+}
+
+
+
