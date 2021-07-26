@@ -1,0 +1,66 @@
+ol {
+    background-color: yellow;
+}
+
+ol li:nth-of-type(2n) {
+    color: green;
+
+}
+
+ol li:nth-of-type(2n+1) {
+    text-transform: uppercase;
+}
+
+li {
+    font-size: 20px;
+}
+
+li em {
+    font-weight: 800;
+}
+
+ul.languages li.blue{
+    color: blue;
+}
+
+.header {
+    color: red;
+}
+
+.italic {
+    font-size: 40px;
+    border: 1px solid black;
+}
+
+ul.languages li.blue{
+    color: blue;
+}
+
+.pink {
+    background-color: pink;
+}
+
+.stack:hover {
+    color: orange;
+    font-weight: 800;
+}
+
+.w3schools:hover {
+    color: green;
+    font-weight: 800;
+}
+
+.mdn:hover {
+    color: black;
+    font-weight: 800;
+}
+
+.devdocs:hover {
+    color: yellow;
+    font-weight: 800;
+}
+
+.trybe:hover {
+    color: green;
+    font-weight: 800;
+}
