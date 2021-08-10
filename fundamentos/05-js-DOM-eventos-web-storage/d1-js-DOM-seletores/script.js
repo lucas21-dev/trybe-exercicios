@@ -1,0 +1,14 @@
+document.querySelector('header h1').style.backgroundColor = '#00b069';
+document.querySelector('header').style.backgroundColor = '#00b069';
+document.querySelector('section').style.background = '#fa7f72';
+document.querySelector('section div').style.backgroundColor = '#fa7f72';
+document.getElementsByTagName('div')[1].style.backgroundColor = '#fa7f72';
+document.getElementsByTagName('h3')[0].style.backgroundColor = '#ff00cc';
+document.getElementsByTagName('h3')[1].style.backgroundColor = '#ff00cc';
+document.getElementsByClassName('no-emergency-tasks')[0].style.backgroundColor = '#ffff80';
+document.getElementsByTagName('div')[2].style.backgroundColor = '#ffff80';
+document.getElementsByTagName('div')[3].style.backgroundColor = '#ffff80';
+document.getElementsByTagName('h3')[2].style.backgroundColor = 'black';
+document.getElementsByTagName('h3')[3].style.backgroundColor = 'black';
+document.getElementsByTagName('footer')[0].style.backgroundColor = '#003533';
+document.querySelector('footer div').style.backgroundColor = '#003533'
