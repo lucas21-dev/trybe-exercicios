@@ -60,7 +60,11 @@
       // COLOQUE SEU CÓDIGO AQUI
       let h1 = document.createElement('h1');
       h1.innerText = 'Exercício 5.2 - JavaScript DOM';
-      document.querySelector('body').appendChild(h1);
+      let body = document.querySelector('body');
+      body.appendChild(h1);
+      let main = document.createElement('main');
+      main.className = 'main-content';
+      body.appendChild(main);
     </script>
   </body>
 </html>
