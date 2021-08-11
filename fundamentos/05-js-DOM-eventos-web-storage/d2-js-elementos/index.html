@@ -77,7 +77,19 @@
       let sectionRight = document.createElement('section');
       sectionRight.className = 'right-content';
       main.appendChild(sectionRight);
-
+      let img = document.createElement('img');
+      img.src = 'https://picsum.photos/200';
+      img.className = 'small-img'
+      section.appendChild(img);
+      let lista = ['um', 'dois', 'três', 'quatro', 'cinco', 'seis', 'sete', 'oito', 'nove', 'dez'];
+      let ul = document.createElement('ul');
+      sectionRight.appendChild(ul);
+      for (let index of lista) {
+        let valoresLista = index;
+        let li = document.createElement('li')
+        li.innerText = valoresLista
+        ul.appendChild(li)
+      }
 
     </script>
   </body>
