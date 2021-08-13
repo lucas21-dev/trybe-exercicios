@@ -11,6 +11,44 @@ function createDaysOfTheWeek() {
     };
   };
   
-  createDaysOfTheWeek();
+createDaysOfTheWeek();
   
-  // Escreva seu código abaixo.
+// Escreva seu código abaixo.
+
+function createDaysOfTheMonth() {
+  const dezDaysList = [29, 30, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31];
+  const monthDays = document.getElementById('days');
+
+  for (let index of dezDaysList) {
+    let NumOfDay = index;
+    let dayList = document.createElement('li');
+
+    if (NumOfDay === 25 ) {
+      dayList.className = 'day friday holiday';
+    } else if (NumOfDay === 4 || NumOfDay === 11 || NumOfDay === 18) {
+      dayList.className = 'day friday';
+    } else if (NumOfDay === 24 || NumOfDay === 31) {
+      dayList.className = 'day holiday';
+    } else {
+      dayList.className = 'day';
+    }
+
+    dayList.innerText = NumOfDay;
+    
+    monthDays.appendChild(dayList);
+  }
+}
+
+createDaysOfTheMonth();
+
+
+function holidays(feriados) {
+  const buttonHoliday = document.createElement('button');
+  buttonHoliday.id = 'btn-holiday';
+  buttonHoliday.innerText = feriados;
+  const buttons = document.querySelector('.buttons-container');
+  buttons.appendChild(buttonHoliday)
+}
+
+holidays('Feriados');
+
