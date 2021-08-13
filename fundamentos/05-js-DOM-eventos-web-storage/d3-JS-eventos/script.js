@@ -63,8 +63,35 @@ function handleColorChange() {
     if (holiday.style.backgroundColor != 'white') {
       holiday.style.backgroundColor = 'white';
     } else {
-      holiday.style.backgroundColor = '#eee';
+      holiday.style.backgroundColor = 'rgb(238,238,238)';
     };
   };
 };
+
+function fridays(friday) {
+  const day = document.createElement('button');
+  day.id = 'btn-friday';
+  day.innerText = friday;
+  const buttons2 = document.querySelector('.buttons-container');
+  buttons2.appendChild(day);
+}
+
+fridays('Sexta-Feira');
+
+const buttonFri = document.querySelector('#btn-friday');
+buttonFri.addEventListener('click', handleColorChange2);
+
+function handleColorChange2() {
+  const liFridays = document.getElementsByClassName('friday');
+
+  for (let index of liFridays) {
+    let friday = index;
+    if (friday.style.backgroundColor != 'rgb(152, 255, 152)') {
+      friday.style.backgroundColor = 'rgb(152, 255, 152)';
+    } else {
+      friday.style.backgroundColor = 'rgb(238, 238, 238)';
+    };
+  };
+};
+
 
