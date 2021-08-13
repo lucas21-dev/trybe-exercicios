@@ -83,13 +83,14 @@ buttonFri.addEventListener('click', handleColorChange2);
 
 function handleColorChange2() {
   const liFridays = document.getElementsByClassName('friday');
-
-  for (let index of liFridays) {
-    let friday = index;
-    if (friday.style.backgroundColor != 'rgb(152, 255, 152)') {
-      friday.style.backgroundColor = 'rgb(152, 255, 152)';
+  
+  for (let index = 0; index < liFridays.length; index += 1) {
+    let friday = liFridays[index];
+    if (friday.innerText != 'SEXTOU!') {
+      friday.innerText = 'SEXTOU!';
     } else {
-      friday.style.backgroundColor = 'rgb(238, 238, 238)';
+      let fridays = [4, 11, 18, 25];
+      friday.innerText = fridays[index]
     };
   };
 };
