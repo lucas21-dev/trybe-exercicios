@@ -52,3 +52,19 @@ function holidays(feriados) {
 
 holidays('Feriados');
 
+const buttonHoly = document.querySelector('#btn-holiday');
+buttonHoly.addEventListener('click', handleColorChange);
+
+function handleColorChange() {
+  const liHolidays = document.getElementsByClassName('holiday');
+
+  for (let index of liHolidays) {
+    let holiday = index;
+    if (holiday.style.backgroundColor != 'white') {
+      holiday.style.backgroundColor = 'white';
+    } else {
+      holiday.style.backgroundColor = '#eee';
+    };
+  };
+};
+
