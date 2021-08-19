@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Currículo</title>
+</head>
+
+<body>
+    <h1>Crie Seu Currículo!</h1>
+
+    <form action="" method="get">
+        <fieldset>
+            <h3>Seus Dados</h3>
+            <label for="nome">Nome:</label>
+            <input id="nome" name="nome" type="text" maxlength="40" required>
+            <label for="email">Email:</label>
+            <input type="text" name="email" maxlength="50" required id="email">
+            <label for="CPF">CPF:</label>
+            <input type="text" name="CPF" maxlength="11" required id="CPF">
+            <label for="endereço">Endereço:</label>
+            <input type="text" name="endereço" id="endereço" maxlength="200" required>
+            <label for="cidade">Cidade:</label>
+            <input type="text" name="cidade" id="cidade" maxlength=28 required>
+            <label for="estados">Estado:</label>
+            <select name="estados" id="estados" required>
+            </select>
+            <label for="tipo">Casa</label>
+            <input type="radio" name="casa" id="casa">
+            <label for="Ap">Apartamento</label>
+            <input type="radio" name="Ap" id="Ap">
+        </fieldset>
+
+        
+    </form>
+    <script src="script.js"></script>
+</body>
+</html>
