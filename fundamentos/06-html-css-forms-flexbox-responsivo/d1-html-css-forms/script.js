@@ -39,4 +39,32 @@ function createSelectStates () {
   }
 }
 
-createSelectStates()
+createSelectStates();
+
+const button = document.getElementById('enviar');
+
+
+function dateVerification (event) {
+  const date = document.getElementById('data');
+  const text = date.value;
+  const day = text[0] + text[1];
+  const div = text[2];
+  const month = text[3] + text[4];
+  const div2 = text[5];
+  const year = text[6] + text[7] + text[8] + text[9];
+
+
+  if (div !== '/' || div2 !== '/') {
+    window.alert('A data de inicio deve ser separadada por: "/ ""!');
+  } else if (day < 0 || day > 31) { 
+    window.alert('O dia deve ser um valor entre 0 e 31!');
+  } else if (month < 0 || month > 12) {
+    window.alert('O mês deve ser um valor entre 0 e 12!')
+  }
+
+  event.preventDefault();
+  compiledData()
+}
+
+button.addEventListener('click', dateVerification);
+

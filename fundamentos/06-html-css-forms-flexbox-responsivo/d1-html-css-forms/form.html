@@ -11,7 +11,7 @@
 <body>
     <h1>Crie Seu Currículo!</h1>
 
-    <form action="" method="get">
+    <form action="" method="get" id="dados">
         <fieldset>
             <h3>Seus Dados</h3>
             <label for="nome">Nome:</label>
@@ -27,14 +27,29 @@
             <label for="estados">Estado:</label>
             <select name="estados" id="estados" required>
             </select>
-            <label for="tipo">Casa</label>
-            <input type="radio" name="casa" id="casa">
+            <p>Tipo de Moradia:</p>
+            <label for="casa">Casa</label>
+            <input type="radio" name="casa" id="casa" required>
             <label for="Ap">Apartamento</label>
-            <input type="radio" name="Ap" id="Ap">
+            <input type="radio" name="casa" id="Ap" required>
         </fieldset>
 
-        
+        <fieldset>
+            <h3>Último Emprego</h3>
+            <label for="Resumo">Resumo de Experiências:</label>
+            <textarea name="Resumo" id="Resumo" cols="60" rows="3" maxlength="1000" required></textarea>
+            <label for="cargo">Cargo:</label>
+            <input type="text" name="cargo" id="cargo"required maxlength="40">
+            <label for="descricao">Descrição:</label>
+            <input type="text" name="descricao" id="descricao" maxlength="500" required>
+            <label for="data">Data de início: <em>O formato deve ser dd/mm/aaaa</em></label>
+            <input type="text" name="data" id="data" maxlength="10" required>
+            <input type="submit" value="Enviar" id="enviar">
+        </fieldset>
     </form>
+    <div id="compiled">
+
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
