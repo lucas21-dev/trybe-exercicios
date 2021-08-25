@@ -1,6 +1,6 @@
 body {
   font-size: 28px;
-  margin: 10px 25px;
+  margin: 10px 10px;
 }
 
 h1 {
@@ -12,10 +12,38 @@ h2 {
 }
 
 img {
-    max-width: 100%;
-    margin: 15px 0;
+  max-width: 100%;
+  margin: 15px;
 }
 
 figure {
-    margin: 0;
+  margin: 0;
 }
+
+@media screen and (min-width: 750px) {
+  body {
+    background-color: beige;
+    font-size: 32px;
+    margin: 10px 10%;
+  }
+
+  main {
+    display: flex;
+    max-width: 800px;
+    flex-wrap: wrap; 
+    justify-content: flex-start;
+  }
+
+  main h2 {
+    margin-right: 400px;
+  }
+
+  img {
+    width: 95%;
+  }
+
+  figure {
+    flex-basis: 300px;
+  }
+}
+
