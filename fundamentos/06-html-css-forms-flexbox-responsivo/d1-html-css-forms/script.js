@@ -39,10 +39,22 @@ function createSelectStates () {
   }
 }
 
-createSelectStates();
 
-const button = document.getElementById('enviar');
 
+
+
+function compiledData() {
+  const formData = document.getElementById('dados');
+  let text = '';
+  const compiled = document.getElementById('compiled');
+
+  for (let i = 1; i < formData.length; i += 1) {
+    text += formData[i].value + '<br>';
+  }
+  
+  compiled.innerHTML = text;
+
+}
 
 function dateVerification (event) {
   const date = document.getElementById('data');
@@ -63,8 +75,12 @@ function dateVerification (event) {
   }
 
   event.preventDefault();
-  compiledData()
+  compiledData();
+  
 }
+
+const button = document.getElementById('enviar');
 
 button.addEventListener('click', dateVerification);
 
+createSelectStates();
