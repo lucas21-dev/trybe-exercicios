@@ -24,12 +24,8 @@ const sortedOddsAndEvens = oddsAndEvens.sort((a,b) => a - b);
 // Parte 2 do exercício
 
 const factorial = (number) => {
-  let oldNumber = 1;
-  for (let index = 2; index <= number; index += 1) {
-    oldNumber *= index;
-    }
-  console.log(oldNumber);  
+  return number === 0 ? 1 : number * factorial(number - 1);  
 }
 
-factorial(5);
+console.log(factorial(5));
 
