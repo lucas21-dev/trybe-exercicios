@@ -27,5 +27,19 @@ const factorial = (number) => {
   return number === 0 ? 1 : number * factorial(number - 1);  
 }
 
-console.log(factorial(5));
+// console.log(factorial(5));
 
+function biggestWord (frase) {
+  const arrayOfWords = frase.split(' ');
+  let word = 0;
+  let index;
+  for (let biggest of arrayOfWords) {
+    if (biggest.length > word) {
+      word = biggest.length;
+      index = biggest;
+    }
+  }
+  console.log(index);
+}
+
+biggestWord('Antônio foi no banheirão e não sabemos o que aconteceu');
