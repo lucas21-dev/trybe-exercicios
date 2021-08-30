@@ -17,3 +17,9 @@ const lesson3 = {
   professor: 'Maria Clara',
   turno: 'noite',
 };
+
+function addTurn(obj, turno, manha) {
+  obj[turno] = manha;
+}
+
+addTurn(lesson2, 'turno', 'manhã');
