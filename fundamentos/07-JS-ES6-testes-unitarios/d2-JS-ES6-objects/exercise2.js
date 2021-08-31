@@ -29,3 +29,10 @@ function listKeys(obj) {
 }
 
 listKeys(lesson1);
+
+function objLength(obj) {
+  const arrayOfObject = Object.keys(obj);
+  return arrayOfObject.length;
+}
+
+objLength(lesson3);
