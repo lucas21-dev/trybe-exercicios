@@ -63,3 +63,10 @@ function createAllLessons(obj1, obj2, obj3) {
 
 createAllLessons(lesson1, lesson2, lesson3);
 
+function getValueByNumber(obj, index) {
+  const indexObj = Object.values(obj);
+  return indexObj[index];
+}
+
+getValueByNumber(lesson1, 0);
+
