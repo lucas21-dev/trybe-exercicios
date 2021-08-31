@@ -36,3 +36,11 @@ function objLength(obj) {
 }
 
 objLength(lesson3);
+
+function valueList(obj) {
+  const objValues = Object.values(obj);
+  return objValues;
+}
+
+valueList(lesson2);
+
