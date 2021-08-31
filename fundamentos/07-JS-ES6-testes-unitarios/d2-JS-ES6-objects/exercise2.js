@@ -70,3 +70,20 @@ function getValueByNumber(obj, index) {
 
 getValueByNumber(lesson1, 0);
 
+function pairCheck(obj, key, value) {
+  const pairs = Object.entries(obj);
+  let result;
+  for (array of pairs) {
+    if (array.includes(key) && array.includes(value)) {
+      result = true;
+      break;
+    } else {
+      result = false;
+    }
+  }
+  return result
+}
+
+pairCheck(lesson3, 'numeroEstudantes', 40);
+
+
