@@ -44,3 +44,15 @@ function valueList(obj) {
 
 valueList(lesson2);
 
+function createAllLessons(obj1, obj2, obj3) {
+  const allLessons = {};
+  allLessons.lesson1 = {};
+  allLessons.lesson2 = {};
+  allLessons.lesson3 = {};
+  Object.assign(allLessons.lesson1, obj1);
+  Object.assign(allLessons.lesson2, obj2);
+  Object.assign(allLessons.lesson3, obj3);
+  console.log(allLessons);
+}
+
+createAllLessons(lesson1, lesson2, lesson3);
