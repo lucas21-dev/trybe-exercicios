@@ -18,8 +18,14 @@ const lesson3 = {
   turno: 'noite',
 };
 
-function addTurn(obj, turno, manha) {
+function addTurn (obj, turno, manha) {
   obj[turno] = manha;
 }
 
 addTurn(lesson2, 'turno', 'manhã');
+
+function listKeys(obj) {
+  return Object.keys(obj);
+}
+
+listKeys(lesson1);
