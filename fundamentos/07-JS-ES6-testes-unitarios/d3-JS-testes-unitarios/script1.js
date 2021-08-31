@@ -10,5 +10,8 @@ function sum(a, b) {
 
 // implemente seus testes aqui
 
-const sumEqual = sum(4, 5);
-assert.strictEqual(sumEqual, 9, '4 + 5 é igual a 9');
+const sumEqual9 = sum(4, 5);
+assert.strictEqual(sumEqual9, 9, '4 + 5 é igual a 9');
+
+const sumEqual0 = sum(0, 0);
+assert.strictEqual(sumEqual0, 0, 'A soma de zeros é zero!');
