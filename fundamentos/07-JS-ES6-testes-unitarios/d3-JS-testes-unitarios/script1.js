@@ -17,6 +17,9 @@ const sumEqual0 = sum(0, 0);
 assert.strictEqual(sumEqual0, 0, 'A soma de zeros é zero!');
 
 assert.throws(() => {
-  sum(4, '5')
-})
+  sum(4, '5');
+});
 
+assert.throws(() => {
+  sum(4, '5');
+}, /^Error: parameters must be numbers$/);
