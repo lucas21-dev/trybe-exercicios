@@ -11,3 +11,5 @@ function myRemove(arr, item) {
 }
 
 // implemente seus testes aqui
+const testArr = myRemove([1, 2, 3, 4], 3); 
+assert.deepStrictEqual(testArr, [1, 2, 4], 'Retorno não esperado!');
