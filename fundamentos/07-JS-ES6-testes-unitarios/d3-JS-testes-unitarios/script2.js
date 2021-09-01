@@ -17,3 +17,5 @@ assert.deepStrictEqual(testArr, [1, 2, 4], 'Retorno não esperado!');
 const testArr2 = myRemove([1, 2, 3, 4], 3);
 assert.notDeepStrictEqual(testArr2, [1, 2, 3, 4], 'Retorno não esperado!');
 
+const testArr3 = myRemove([1, 2, 3, 4], 0);
+assert.deepStrictEqual(testArr3, [1, 2, 3, 4], 'Este array sofreu alteração!');
