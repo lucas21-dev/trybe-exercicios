@@ -18,6 +18,7 @@ const dragon = {
   damage: undefined,
 };
 
+const initialBattleMembers = { mage, warrior, dragon };
 const battleMembers = { mage, warrior, dragon };
 
 const dragonDamage = () => {
@@ -51,3 +52,37 @@ const manaAndDamage = () => {
     manaCons: consumedMana,
   }
 }
+
+const gameActions = {
+  // Crie as HOFs neste objeto.
+  warriorTurn: (warriorDamage) => {
+    const warriorTurnActions = warriorDamage();
+    warrior.damage = warriorTurnActions;
+    dragon.healthPoints = dragon.healthPoints - warriorTurnActions;
+  },
+  mageTurn: (manaAndDamage) => {
+    const mageTurnActions = manaAndDamage();
+    mage.damage = mageTurnActions.damage;
+    mage.mana = mage.mana - mageTurnActions.manaCons;
+    dragon.healthPoints = dragon.healthPoints - mage.damage;
+  },
+  dragonTurn: (dragonDamage) => {
+    const dragonTurnActions = dragonDamage();
+    dragon.damage = dragonTurnActions;
+    mage.healthPoints = mage.healthPoints - dragonTurnActions;
+    warrior.healthPoints = warrior.healthPoints - dragonTurnActions;
+  },
+  attBattleMembers: () => {
+    gameActions.warriorTurn(warriorDamage);
+    gameActions.mageTurn(manaAndDamage);
+    gameActions.dragonTurn(dragonDamage);
+    return battleMembers;
+  }
+};
+
+
+
+console.log('Ínicio do turno:');
+console.table(initialBattleMembers);
+console.log('Após o turno:');
+console.table(gameActions.attBattleMembers());
