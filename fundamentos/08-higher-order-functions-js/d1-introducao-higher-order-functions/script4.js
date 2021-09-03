@@ -64,7 +64,9 @@ const gameActions = {
     const mageTurnActions = manaAndDamage();
     mage.damage = mageTurnActions.damage;
     mage.mana = mage.mana - mageTurnActions.manaCons;
-    dragon.healthPoints = dragon.healthPoints - mage.damage;
+    if (typeof mage.damage === 'number') {
+      dragon.healthPoints = dragon.healthPoints - mage.damage;
+    }
   },
   dragonTurn: (dragonDamage) => {
     const dragonTurnActions = dragonDamage();
@@ -79,8 +81,6 @@ const gameActions = {
     return battleMembers;
   }
 };
-
-
 
 console.log('Ínicio do turno:');
 console.table(initialBattleMembers);
