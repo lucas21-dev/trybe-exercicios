@@ -74,3 +74,15 @@ function reduceNames() {
 }
 
 assert.strictEqual(reduceNames(), expectedResult);
+
+const expectedResult1 = 43;
+
+function averageAge() {
+  // escreva seu código aqui
+  const sum = books.reduce((acc, book) => acc + (book.releaseYear - book.author.birthYear), 0);
+  const media = sum / books.length;
+  return media;
+}
+
+assert.strictEqual(averageAge(), expectedResult1);
+
