@@ -124,7 +124,7 @@ function nameAndAge() {
 
 assert.deepStrictEqual(nameAndAge(), expectedResult2);
 
-const expectedResult = [
+const expectedResult3 = [
   { 
     id: 1,
     name: 'As Crônicas de Gelo e Fogo',
@@ -162,4 +162,38 @@ function fantasyOrScienceFiction() {
   return fictionOrFantasy;
 }
 
-assert.deepStrictEqual(fantasyOrScienceFiction(), expectedResult);
+assert.deepStrictEqual(fantasyOrScienceFiction(), expectedResult3);
+
+const expectedResult4 = [
+  {
+    id: 6,
+    name: 'O Chamado de Cthulhu',
+    genre: 'Terror',
+    author: { name: 'H. P. Lovecraft', birthYear: 1890 },
+    releaseYear: 1928,
+  },
+  {
+    id: 3,
+    name: 'Fundação',
+    genre: 'Ficção Científica',
+    author: { name: 'Isaac Asimov', birthYear: 1920 },
+    releaseYear: 1951,
+  },
+  {
+    id: 2,
+    name: 'O Senhor dos Anéis',
+    genre: 'Fantasia',
+    author: { name: 'J. R. R. Tolkien', birthYear: 1892 },
+    releaseYear: 1954,
+  },
+];
+
+function oldBooksOrdered() {
+  // escreva seu código aqui
+  const older = books.filter((id) => (2021 - id.releaseYear) > 60);
+  older.sort((a, b) => (2021 - b.releaseYear) - (2021 - a.releaseYear))
+  return older;
+}
+
+assert.deepStrictEqual(oldBooksOrdered(), expectedResult4);
+
