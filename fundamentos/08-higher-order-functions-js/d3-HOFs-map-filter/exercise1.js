@@ -197,3 +197,20 @@ function oldBooksOrdered() {
 
 assert.deepStrictEqual(oldBooksOrdered(), expectedResult4);
 
+const expectedResult5 = [
+  'Frank Herbert',
+  'George R. R. Martin',
+  'Isaac Asimov',
+  'J. R. R. Tolkien',
+];
+
+function fantasyOrScienceFictionAuthors() {
+  // escreva seu código aqui
+  const fictionOrFantasyAuthors = books.filter((id) => id.genre === 'Fantasia' || id.genre === 'Ficção Científica');
+  const authors = fictionOrFantasyAuthors.map((id) => id.author.name);
+  authors.sort();
+  return authors;
+}
+
+assert.deepStrictEqual(fantasyOrScienceFictionAuthors(), expectedResult5);
+
