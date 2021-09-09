@@ -228,3 +228,14 @@ function oldBooks() {
 }
 
 assert.deepStrictEqual(oldBooks(), expectedResult6);
+
+const expectedResult7 = 'O Senhor dos Anéis';
+
+function authorWith3DotsOnName() {
+  // escreva seu código aqui
+  const initials = books.filter((id) => id.author.name.slice(7, 8) === '.');
+  const name = initials[0].name;
+  return name;
+}
+
+assert.deepStrictEqual(authorWith3DotsOnName(), expectedResult7);
