@@ -17,19 +17,19 @@ const fetchJoke = () => {
       h2.appendChild(p);
     })
 
-  const promise = new Promise((resolve, reject) => {
+new Promise((resolve, reject) => {
   const array = Array.from({ length: 10 }, () => (Math.floor(Math.random() * 50)));
-  console.log(array);
   const arrayAoQuadrado = array.map((number) => number * number);
   const sum = arrayAoQuadrado.reduce((acc, number) => number + acc);
-  console.log(sum);
+  
   if (sum < 8000) {
-    return resolve();
+    return resolve(sum);
   }
   return reject()
-  })
-  .then(() => console.log('Promise resolvida'))
-  .catch(() => console.log('Promise rejeitada'))
+})
+.then((sum) => console.log([sum / 2, sum / 3, sum / 5, sum / 10]))
+.catch(() => console.log('Promise rejeitada'))
+
 };
 
 window.onload = () => fetchJoke();
