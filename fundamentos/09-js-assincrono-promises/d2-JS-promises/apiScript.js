@@ -27,8 +27,9 @@ new Promise((resolve, reject) => {
   }
   return reject()
 })
-.then((sum) => console.log([sum / 2, sum / 3, sum / 5, sum / 10]))
-.catch(() => console.log('Promise rejeitada'))
+.then((sum) => [sum / 2, sum / 3, sum / 5, sum / 10])
+.then((arrRef) => console.log(arrRef.reduce((acc, number) => acc + number )))
+.catch(() => console.log('É mais de oito mil! Essa promise deve estar quebrada!'))
 
 };
 
